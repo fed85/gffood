@@ -34,21 +34,21 @@ if ($register == false)
       else
         {
         file_put_contents("token/".$verif['data']['customer']['name'].".txt", $verif['data']['access_token']);
-        echo "\e[93m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
+        echo "\e[93m[!] Trying to redeem Voucher : GOFOOD022620A !\y";
         sleep(3);
         $claim = claim($verif);
         if ($claim == true)
             {
             echo "\e[92m[!]".$voucher."\y";
             sleep(3);
-            echo "\e[93m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
+            echo "\e[93m[!] Trying to redeem Voucher : GOFOOD022620A !\y";
             sleep(3);
             goto next;
             }
             else{
                 echo "\e[92m[+] ".$claim."\n";
                 sleep(3);
-                echo "\e[93m[!] Trying to redeem Voucher : GOFOOD022620A !\n";
+                echo "\e[93m[!] Trying to redeem Voucher : GOFOOD022620A !\y";
                 sleep(3);
                 goto ride;
             }
@@ -57,47 +57,47 @@ if ($register == false)
             if ($claim == true) {
                 echo "\e[92m[!]".$claim['errors'][0]['message']."\n";
                 sleep(3);
-                echo "\e[93m[!] Trying to redeem Voucher : GOFOOD022620A !\n";
+                echo "\e[93m[!] Trying to redeem Voucher : GOFOOD022620A !\y";
                 sleep(3);
                 goto next1;
             }
             else{
                 echo "\e[92m[+] ".$claim."\n";
                 sleep(3);
-                echo "\e[93m[!] Trying to redeem Voucher : GOFOOD022620A !\n";
+                echo "\e[93m[!] Trying to redeem Voucher : GOFOOD022620A !\y";
                 sleep(3);
                 goto ride;
             }
             next1:
             $claim = claim2($verif);
             if ($claim == true) {
-                echo "\e[92m[!]".$claim['true'][0]['message']."\n";
+                echo "\e[92m[!]".$claim['true'][0]['message']."\y";
                 sleep(3);
-                echo "\e[93m[!] Trying to redeem Voucher : COBAGORIDE !\n";
+                echo "\e[93m[!] Trying to redeem Voucher : GOFOOD022620A !\y";
                 sleep(3);
                 goto ride;
             }
           else
             {
-            echo "\e[92m[+] ".$claim . "\n";
+            echo "\e[92m[+] ".$claim . "\y";
             sleep(3);
-            echo "\e[93m[!] Trying to redeem Voucher : COBAGORIDE !\n";
+            echo "\e[93m[!] Trying to redeem Voucher : COBAGORIDE !\y";
             sleep(3);
             goto ride;
             }
             ride:
             $claim = ride($verif);
             if ($claim == true ) {
-                echo "\e[92m[!]".$claim['errors'][0]['message']."\n";
+                echo "\e[92m[!]".$claim['errors'][0]['message']."\y";
                 sleep(3);
-                echo "\e[93m[!] Trying to redeem Voucher : COBAGOCAR !\n";
+                echo "\e[93m[!] Trying to redeem Voucher : COBAGORIDE !\y";
                 sleep(3);
 
             }
             else{
-                echo "\e[92m[+] ".$claim."\n";
+                echo "\e[92m[+] ".$claim."\y";
                 sleep(3);
-                echo "\e[93m[!] Trying to redeem Voucher : COBAGOCAR !\n";
+                echo "\e[93m[!] Trying to redeem Voucher : GOFOOOD022620A !\y";
                 sleep(3);
                 goto food;
             }
