@@ -10,7 +10,7 @@ $header[] = "X-AppVersion: 3.30.2";
 $header[] = "X-UniqueId: ".time()."57".mt_rand(1000,9999);
 $header[] = "Connection: keep-alive";
 $header[] = "X-User-Locale: en_ID";
-$header[] = "X-Location: -5.13171891,119.417872";
+$header[] = "X-Location: -6.248481,106.990519";
 $header[] = "X-Location-Accuracy: 3.0";
 if ($pin):
 $header[] = "pin: $pin";
@@ -149,7 +149,7 @@ function verif($otp, $token)
     }
 function claim($token)
     {
-    $data = '{"promo_code":"GOFOOD022620A"}';    
+    $data = '{"promo_code":"COBAGOFOOD090320A"}';    
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
     if ($claim['success'] == 1)
         {
@@ -163,7 +163,7 @@ function claim($token)
     }
     function claim1($token)
     {
-    $data = '{"promo_code":"GOFOOD022620A"}';    
+    $data = '{"promo_code":"GOFOODLAGI090320A"}';    
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
     if ($claim['success'] == 1)
         {
@@ -177,7 +177,7 @@ function claim($token)
     }
     function claim2($token)
     {
-    $data = '{"promo_code":"GOFOOD022620A"}';    
+    $data = '{"promo_code":"COBAINGOCAR"}';    
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
     if ($claim['success'] == 1)
         {
@@ -191,7 +191,7 @@ function claim($token)
     }
      function ride($token)
     {
-    $data = '{"promo_code":"COBAGORIDE"}';    
+    $data = '{"promo_code":"COBAGOCAR14"}';    
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
     if ($claim['success'] == 1)
         {
@@ -205,7 +205,7 @@ function claim($token)
     }
      function cekvocer($token)
     {
-    $data = '{"promo_code":"GOFOOD022620A"}';    
+    $data = '{"promo_code":"COBAGOFOOD090320A"}';    
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
     if ($claim['success'] == 1)
         {
@@ -219,7 +219,7 @@ function claim($token)
     }
      function food($token)
     {
-    $data = '{"promo_code":"GOFOOD022620A"}';    
+    $data = '{"promo_code":"GOFOODLAGI090320A"}';    
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
     if ($claim['success'] == 1)
         {
